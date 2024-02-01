@@ -13,7 +13,7 @@ def data_split(X, Y):
 
     return X_train, X_test, Y_train, Y_test
 
-def model_train(df):
+def model_train(X_train, Y_train):
     forest = RandomForestRegressor(n_estimators = 100,
                               criterion = 'friedman_mse',
                               random_state = 1,

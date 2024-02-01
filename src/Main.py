@@ -3,13 +3,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import pickle
+import pathlib
+from joblib import dump
 
 from LabelEncoder import label_encode, feature_drop, polynomial_split
 from ModelTrain import data_split, model_train
 
-df = pd.read_csv('../data/insurance.csv')
+df = pd.read_csv('./data/insurance.csv')
 
-X = df.drop['charges', axis=1]
+X = df.drop(columns=['charges'])
 Y = df['charges']
 
 X = label_encode(X)
@@ -19,6 +21,6 @@ X = polynomial_split(X)
 X_train, X_test, Y_train, Y_test = data_split(X, Y)
 model=model_train(X_train, Y_train)
 
-pickle.dump(model, open('../model/random-forest-model.pkl', 'wb'))
+dump(model, pathlib.Path('model/random-forest-model.pkl'))
 
 

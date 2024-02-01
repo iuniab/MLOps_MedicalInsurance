@@ -1,0 +1,1 @@
+df_labels = ['age', 'sex', 'bmi', 'children', 'smoker', 'region']

@@ -1,4 +1,6 @@
 from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import PolynomialFeatures
+
 
 def label_encode(df):
     

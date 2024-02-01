@@ -1,7 +1,7 @@
 {
     "input_one": {
         "document":
-            [[31, "male", 36.850, 0, "yes", "southwest"]]
+            [31, "male", 36.850, 0, "yes", "southwest"]
     },
     "output_one": {
         "results": {
