@@ -39,8 +39,9 @@ def transf_and_predict(request: DocumentRequest) -> Response:
     
     # Use the pre-processed input to predict output
     Y = model.predict(X)
+    prediction = Y.tolist() if hasattr(Y, 'tolist') else list(Y)
 
-    return Y
+    return prediction
 
 @app.get("/")
 def root():
