@@ -18,8 +18,9 @@ app=FastAPI()
 class DocumentRequest(BaseModel):
     document: list[Any]
 
-#model=load(pathlib.Path('model/random-forest-model.pkl'))
-model=load(pathlib.Path(rf'C:\Users\AbdullahYousaf\OneDrive - Kubrick Group\Desktop\MLOps\MLOps_MedicalInsurance\model\random-forest-model.pkl'))
+model_path = pathlib.Path('../model/random-forest-model.pkl')
+model = load(model_path)
+#model=load(pathlib.Path(rf'C:\Users\AbdullahYousaf\OneDrive - Kubrick Group\Desktop\MLOps\MLOps_MedicalInsurance\model\random-forest-model.pkl'))
 
 def df_input(X):
     df=pd.DataFrame(columns=df_labels)
