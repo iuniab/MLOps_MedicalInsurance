@@ -6,8 +6,8 @@ import pickle
 import pathlib
 from joblib import dump
 
-from LabelEncoder import label_encode, feature_drop, polynomial_split
-from ModelTrain import data_split, model_train
+from transform import label_encode, feature_drop, polynomial_split
+from train import data_split, model_train
 
 df = pd.read_csv('./data/insurance.csv')
 

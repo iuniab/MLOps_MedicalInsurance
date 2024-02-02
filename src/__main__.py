@@ -1,7 +1,7 @@
 import sys
 import pickle
 import pathlib
-import LabelEncoder as le
+import transform as le
 from joblib import load
 import uvicorn
 import pandas as pd
